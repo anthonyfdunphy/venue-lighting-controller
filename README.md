@@ -47,3 +47,6 @@ def onValueChange(channel, sampleIndex, val, prev):
 	return
 	
 ```
+
+### Future Features
+There are some features I wish to add to this controller in the future. One being, the ability to create a 'scene' by turning on the desired dimmer channels. When this is done, the user selects a button called 'save scene' this will save the channel value in an array or list which can be called back at any time through the GUI front end.
