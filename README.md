@@ -52,3 +52,13 @@ def onValueChange(channel, sampleIndex, val, prev):
 There are some features I wish to add to this controller in the future. One being, the ability to create a 'scene' by turning on the desired dimmer channels. When this is done, the user selects a button called 'save scene' this will save the channel value in an array or list which can be called back at any time through the GUI front end.
 
 This should save the active scene values by name and value to a new list with Python. When the scene is called, then the scene is called using Python.
+
+```
+Example code would be something like this:
+
+n = op('merge_buttons')
+my_dict = {c.name: c for c in n.chans()}
+for name, value in my_dict.items():
+    print(name, value)
+
+```
