@@ -83,11 +83,15 @@ def onOffToOn(channel, sampleIndex, val, prev):
 			key = getattr(lightingScene.chan(d), 'name')
 			value = lightingScene[d].eval()
 			scenes[key] = value
+			#copy the current scenes into the saved scene dictionary
+			savedScenes = scenes
 
 	else:
+		print(savedScenes)
+
 		# Iterate through the keys and access their values
-		for i, scene in enumerate(scenes):
-			setattr(savedScene.par, 'value{}'.format(i),scenes[scene])
+		for i, scene in enumerate(savedScenes):
+			setattr(savedScene.par, 'value{}'.format(i),savedScenes[scene])
 
 	return
 ```
