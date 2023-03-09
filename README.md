@@ -62,3 +62,33 @@ for name, value in my_dict.items():
     print(name, value)
 
 ```
+
+
+I have created a section of code that runs when the "Save" and "Cue" button is hit:
+```
+lightingScene = op("active_scene")
+savedScene = op("saved_scenes")
+numDimmers = lightingScene.numChans
+
+scenes = {}
+savedScenes = {}
+
+def onOffToOn(channel, sampleIndex, val, prev):
+
+	global scenes, savedScenes
+
+	if channel.name == "save":
+		for d in range(numDimmers):
+			#getting channel names from Constant CHOP and setting to key
+			key = getattr(lightingScene.chan(d), 'name')
+			value = lightingScene[d].eval()
+			scenes[key] = value
+
+	else:
+		# Iterate through the keys and access their values
+		for i, scene in enumerate(scenes):
+			setattr(savedScene.par, 'value{}'.format(i),scenes[scene])
+
+	return
+```
+
