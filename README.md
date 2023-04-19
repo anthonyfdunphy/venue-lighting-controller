@@ -1,5 +1,5 @@
 # Touchdesigner Lighting Controller
-<img alt="header_image" width="100%" src="https://i.imgur.com/8iAFUph.png" />
+<img alt="header_image" width="100%" src="https://i.imgur.com/QkRoMuL.png" />
 Touchdesigner Lighting Controller created for a venue - a powerful yet user-friendly solution for controlling lighting at any venue. This project has been developed with the goal of providing a reliable, easy-to-use lighting controller that doesn't require extensive training or experience to operate. The purpose of developing this interface was to familarise myself further with more advanced scripting and python principles such as dictionaries, list etc. With 12 slider components, a "cue" and "save" button, and a clickable list of saved scenes, this rudimentary lighting controller allows you to quickly and easily create stunning lighting effects that will captivate your audience. Whether you're hosting a concert, a theatrical performance, or a corporate event, this lighting controller is the perfect tool for adding an extra layer of excitement and professionalism to your production.
 
 ### User Flow
