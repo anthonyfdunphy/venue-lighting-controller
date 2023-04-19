@@ -52,15 +52,11 @@ def onOnToOff(panelValue):
 <img alt="header_image" width="100%" src="https://i.imgur.com/l2rBTeS.png" />
 
 ### Features
-There are 12 sliders which show on the UI, there is a radio toggle group of two buttons to allow the user to select between fader control and cue list control. When the user selects the "save" button, a pop button opens and the user is asked to name the lighting scene. This scene is a snapshot of the currentl lighting levels and can be call by simply clicking on the scene name in the cue list. 
-
-Example: Button 3 controls dimmer channel 3.
+The project user interface (UI) includes 12 sliders, which allow the user to adjust the lighting levels of different dimmer channels. The UI also includes a radio toggle group with two buttons, which enable the user to switch between fader control and cue list control. When the user wants to save a particular lighting scene, they can click on the "save" button, which opens a pop-up window asking them to name the scene. This feature allows the user to take a snapshot of the current lighting levels and settings and store it for future use. The saved scenes can be accessed by clicking on their names in the cue list, which provides an easy way to recall different lighting looks.
 
 Scene Naming            |  Fader Control/Cuelist Control
 :-------------------------:|:-------------------------:
 ![](https://i.imgur.com/tBoudqh.png)  |  ![](https://i.imgur.com/SIsDvEx.png)
-
-All of the button are UI elements are the panel state (i.e. On or Off) is a numeric value of 0 and 1. I merged all the buttons together with a Merge Chop. I then use a function called extractChannel which takes the channel name as a variable and regex pattern match to determine the current dimmer channel value. When button 4 is pressed on from the off position, the extracted channel name is stored in a variable called 'chanVal' and is used to set the dimmer to on with the 'SetDimmerOn' class method from the 'lighting' component. This is shown in the code below.
 
 
 ### Future Features
