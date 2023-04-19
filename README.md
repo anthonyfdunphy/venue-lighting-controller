@@ -39,7 +39,12 @@ def onOnToOff(panelValue):
 		value = lightingScene[d].eval()
 		scenes[key] = value
 		
+	#setting the name entered in the button to the key value of the dictionary
 	op("project_data").ShowScenes.val.update({str(op('popDialog/entry/inputText').par.text): scenes})
+	
+	#this .modified() function is called to notify the dependent operators 
+	op("project_data").ShowScenes.modified()
+	
 	return
 ```
 
